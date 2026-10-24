@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haste × The Boys 角色模组 | 祖国人 · 火车头</title>
+  <meta name="description" content="《Haste》非官方粉丝模组展示页：通过创意工坊 AethaModelSwap 框架（ID 3508742571）把《黑袍纠察队》的祖国人 Homelander 与火车头 A-Train 替换进游戏。包含角色预览、前置依赖、安装步骤与当前进度。Unofficial fan mod showcase for Haste with Homelander and A-Train skins.">
+  <meta name="theme-color" content="#06080d">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Haste × The Boys Character Pack">
+  <meta property="og:title" content="Haste × The Boys 角色模组 | 祖国人 · 火车头">
+  <meta property="og:description" content="《Haste》非官方粉丝模型替换包：祖国人、火车头两套皮肤，基于 AethaModelSwap 框架，附安装步骤与当前进度。">
+  <meta property="og:image" content="assets/Homelander.99031.png">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Haste × The Boys 角色模组 | 祖国人 · 火车头">
+  <meta name="twitter:description" content="《Haste》非官方粉丝模型替换包：祖国人、火车头两套皮肤，基于 AethaModelSwap 框架，附安装步骤与当前进度。">
+  <meta name="twitter:image" content="assets/Homelander.99031.png">
+
+  <link rel="icon" type="image/png" href="assets/Homelander.99031.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theboys-lang");
+        if (saved === "en" || saved === "zh") {
+          document.documentElement.setAttribute("lang", saved === "en" ? "en" : "zh-CN");
+        }
+      } catch (e) { /* 本地存储不可用时保持默认中文 */ }
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">HASTE<em>×</em>THE&nbsp;BOYS</span>
+      </a>
+      <nav class="site-nav" aria-label="页面导航 Site navigation">
+        <a href="#characters"><span data-lang="zh">角色</span><span data-lang="en">Characters</span></a>
+        <a href="#dependency"><span data-lang="zh">前置依赖</span><span data-lang="en">Dependency</span></a>
+        <a href="#install"><span data-lang="zh">安装</span><span data-lang="en">Install</span></a>
+        <a href="#progress"><span data-lang="zh">进度</span><span data-lang="en">Progress</span></a>
+        <a href="#credits"><span data-lang="zh">致谢</span><span data-lang="en">Credits</span></a>
+      </nav>
+      <button id="lang-toggle" type="button" onclick="switchLang()" aria-label="切换语言 Switch language">
+        <span data-lang="zh">EN</span>
+        <span data-lang="en">中文</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="项目简介 Project intro">
+      <div class="hero-glow hero-glow-red" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-navy" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badges">
+            <span class="badge badge-red">
+              <span data-lang="zh">非官方粉丝作品</span>
+              <span data-lang="en">Unofficial fan project</span>
+            </span>
+            <span class="badge">
+              <span data-lang="zh">Steam 创意工坊发布计划中</span>
+              <span data-lang="en">Steam Workshop release planned</span>
+            </span>
+          </p>
+          <h1 class="hero-title">
+            <span class="t-haste">HASTE</span>
+            <span class="t-cross" aria-hidden="true">×</span>
+            <span class="t-boys">THE&nbsp;BOYS</span>
+          </h1>
+          <p class="hero-tagline">
+            <span data-lang="zh">三角色模型替换模组</span>
+            <span data-lang="en">A three-character model replacement mod</span>
+          </p>
+          <p class="hero-lead">
+            <span data-lang="zh">为 Steam 游戏《Haste》制作的非官方粉丝模组：通过创意工坊的 AethaModelSwap 框架，把《黑袍纠察队》的祖国人（Homelander）与火车头（A-Train）替换进主角外观。纯模型替换、不含可执行代码，第一版仅支持 Windows。</span>
+            <span data-lang="en">An unofficial fan mod for the Steam game Haste. Built on the AethaModelSwap Workshop framework, it swaps the player character with Homelander and A-Train from The Boys. Pure model replacement with no executable code of its own — Windows only in the first release.</span>
+          </p>
+          <p class="hero-actions">
+            <a class="btn btn-primary" href="#characters">
+              <span data-lang="zh">查看角色</span>
+              <span data-lang="en">View characters</span>
+            </a>
+            <a class="btn btn-ghost" href="#install">
+              <span data-lang="zh">安装指南</span>
+              <span data-lang="en">Install guide</span>
+            </a>
+          </p>
+          <ul class="hero-stats">
+            <li><strong>3</strong><span data-lang="zh">皮肤</span><span data-lang="en">skins</span></li>
+            <li><strong>Windows</strong><span data-lang="zh">第一版平台</span><span data-lang="en">first-release platform</span></li>
+            <li><strong>Unity 6000.2.13f1</strong><span data-lang="zh">与游戏同版本构建</span><span data-lang="en">built with the game's engine</span></li>
+            <li><strong>AethaModelSwap</strong><span data-lang="zh">前置框架</span><span data-lang="en">required framework</span></li>
+          </ul>
+        </div>
+        <figure class="hero-figure">
+          <div class="poster-frame">
+            <img src="assets/Homelander.99031.png" alt="祖国人游戏内皮肤图标：深蓝制服、金色鹰饰肩甲、红白条纹披风 Homelander in-game skin icon" width="256" height="256">
+            <img src="assets/ATrain.99033.png" alt="火车头游戏内皮肤图标：蓝白竞速服与发光的蓝色胸口徽标 A-Train in-game skin icon" width="256" height="256">
+          </div>
+          <figcaption>
+            <span data-lang="zh">角色游戏内图标（256×256，由 Unity 预制体直接渲染）</span>
+            <span data-lang="en">In-game character icons (256×256, rendered straight from the Unity prefabs)</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CHARACTERS ============ -->
+    <section id="characters" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span data-lang="zh">角色阵容</span><span data-lang="en">The roster</span></p>
+          <h2><span data-lang="zh">两个角色，两套皮肤</span><span data-lang="en">Two characters, two skins</span></h2>
+          <div class="stripe-bar" aria-hidden="true"></div>
+          <p class="section-intro">
+            <span data-lang="zh">每个皮肤由一份 <code>.hastemodel</code> 资源包、一份 IK 参数 JSON 和一枚 256×256 游戏内图标组成，全部由 Unity 6000.2.13f1 从同一套预制体构建与渲染，图标与游戏内模型保持一致。</span>
+            <span data-lang="en">Each skin ships as a <code>.hastemodel</code> bundle, an IK-parameter JSON and a 256×256 in-game icon, all built and rendered from the same Unity 6000.2.13f1 prefabs, so the icons always match the in-game models.</span>
+          </p>
+        </header>
+
+        <div class="cards">
+          <!-- Homelander -->
+          <article class="card c-homelander">
+            <div class="card-stage">
+              <span class="chip chip-id">99031</span>
+              <img src="assets/Homelander.99031.png" alt="祖国人游戏内皮肤图标：深蓝制服、金色鹰饰肩甲、红白条纹披风 Homelander in-game skin icon with navy suit, gold eagle shoulder pads and red-white striped cape" width="256" height="256" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3><span data-lang="zh">祖国人</span><span data-lang="en">Homelander</span></h3>
+              <p class="card-sub">
+                <span data-lang="zh">七人组领袖 · Leader of The Seven</span>
+                <span data-lang="en">Leader of The Seven</span>
+              </p>
+              <p class="card-desc">
+                <span data-lang="zh">深蓝制服、金色鹰饰肩甲、红白条纹披风的完整造型。模型来自 Sketchfab 作者 StarRosea（基于 ShadowGear，CC-BY 授权），经 Humanoid 重绑骨与 Standard 材质重制后打包为 4.06 MB 资源包，含 41 根人形骨骼。</span>
+                <span data-lang="en">The full look: navy bodysuit, gold eagle shoulder pads and a red-and-white striped cape. The model comes from Sketchfab author StarRosea (based on ShadowGear, CC-BY), re-rigged as a Humanoid and rebuilt with Standard materials into a 4.06 MB bundle with 41 humanoid bones.</span>
+              </p>
+              <dl class="meta">
+                <div><dt><span data-lang="zh">资源包</span><span data-lang="en">Bundle</span></dt><dd><code>homelander.99031.windows.hastemodel</code></dd></div>
+                <div><dt><span data-lang="zh">参数</span><span data-lang="en">Params</span></dt><dd><span data-lang="zh"><code>scale 1.1</code>（基线值，待游戏内校准）</span><span data-lang="en"><code>scale 1.1</code> (baseline, pending in-game calibration)</span></dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- ATrain -->
+          <article class="card c-atrain">
+            <div class="card-stage">
+              <span class="chip chip-id">99033</span>
+              <img src="assets/ATrain.99033.png" alt="火车头游戏内皮肤图标：蓝白竞速服与发光的蓝色胸口徽标 A-Train in-game skin icon with a blue-and-white speed suit and glowing chest emblem" width="256" height="256" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3><span data-lang="zh">火车头</span><span data-lang="en">A-Train</span></h3>
+              <p class="card-sub">
+                <span data-lang="zh">世界上最快的人 · The fastest man alive</span>
+                <span data-lang="en">The fastest man alive</span>
+              </p>
+              <p class="card-desc">
+                <span data-lang="zh">蓝白配色的高速竞速服造型。模型来自 Sketchfab 作者 Fortnite Meow Skulls（原作者 @carinhaqualquer，CC-BY 授权），52 根人形骨骼，资源包体积 2.79 MB。</span>
+                <span data-lang="en">The blue-and-white speed suit. The model comes from Sketchfab author Fortnite Meow Skulls (original model by @carinhaqualquer, CC-BY), packed with 52 humanoid bones into a 2.79 MB bundle.</span>
+              </p>
+              <dl class="meta">
+                <div><dt><span data-lang="zh">资源包</span><span data-lang="en">Bundle</span></dt><dd><code>atrain.99033.windows.hastemodel</code></dd></div>
+                <div><dt><span data-lang="zh">参数</span><span data-lang="en">Params</span></dt><dd><span data-lang="zh"><code>scale 1.0</code>（基线值，待游戏内校准）</span><span data-lang="en"><code>scale 1.0</code> (baseline, pending in-game calibration)</span></dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEPENDENCY ============ -->
+    <section id="dependency" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span data-lang="zh">前置依赖</span><span data-lang="en">Required dependency</span></p>
+          <h2><span data-lang="zh">先装 AethaModelSwap 框架</span><span data-lang="en">Install AethaModelSwap first</span></h2>
+          <div class="stripe-bar" aria-hidden="true"></div>
+        </header>
+        <div class="dep-panel">
+          <div class="dep-copy">
+            <p>
+              <span data-lang="zh">本模组是纯内容模组，本身不含任何可执行代码——加载完全依赖创意工坊的 <strong>AethaModelSwap</strong> 框架。请先订阅框架，再订阅本包，两者缺一不可。框架是独立的创意工坊项目，不随本包分发。</span>
+              <span data-lang="en">This is a pure content mod with no executable code of its own — loading is handled entirely by the <strong>AethaModelSwap</strong> Workshop framework. Subscribe to the framework first, then to this pack; one without the other will not work. The framework is a separate Workshop project and is not bundled with the mod.</span>
+            </p>
+            <p class="dep-note">
+              <span data-lang="zh">第一版仅支持 Windows、仅做模型替换，不含语音替换；语音在后续计划中。</span>
+              <span data-lang="en">The first release is Windows-only and replaces models only; voice replacement is planned for a later phase.</span>
+            </p>
+          </div>
+          <div class="dep-id">
+            <p class="dep-id-label"><span data-lang="zh">创意工坊 ID</span><span data-lang="en">Workshop ID</span></p>
+            <p class="dep-id-value">3508742571</p>
+            <a class="btn btn-primary" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3508742571" target="_blank" rel="noopener noreferrer">
+              <span data-lang="zh">打开 AethaModelSwap 工坊页面</span>
+              <span data-lang="en">Open AethaModelSwap on Steam</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSTALL ============ -->
+    <section id="install" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span data-lang="zh">安装与使用</span><span data-lang="en">Install &amp; usage</span></p>
+          <h2><span data-lang="zh">四步开跑</span><span data-lang="en">Four steps to the run</span></h2>
+          <div class="stripe-bar" aria-hidden="true"></div>
+        </header>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <div>
+              <h3><span data-lang="zh">订阅 AethaModelSwap</span><span data-lang="en">Subscribe to AethaModelSwap</span></h3>
+              <p>
+                <span data-lang="zh">在 Steam 创意工坊打开框架页面并点击订阅（ID 3508742571）。</span>
+                <span data-lang="en">Open the framework's Workshop page and hit Subscribe (ID 3508742571).</span>
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <div>
+              <h3><span data-lang="zh">订阅本模组</span><span data-lang="en">Subscribe to this pack</span></h3>
+              <p>
+                <span data-lang="zh">公开创意工坊条目正在准备中（见下方进度），发布后订阅即可。</span>
+                <span data-lang="en">The public Workshop item is being prepared (see progress below); subscribe once it is live.</span>
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <div>
+              <h3><span data-lang="zh">启动《Haste》</span><span data-lang="en">Launch Haste</span></h3>
+              <p>
+                <span data-lang="zh">确保框架与本包都已启用，进入游戏。</span>
+                <span data-lang="en">Make sure both the framework and the pack are enabled, then start the game.</span>
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">4</span>
+            <div>
+              <h3><span data-lang="zh">选择角色</span><span data-lang="en">Pick your character</span></h3>
+              <p>
+                <span data-lang="zh">在游戏内模型 / 皮肤列表中选择祖国人或火车头，开始跑酷。</span>
+                <span data-lang="en">Select Homelander or A-Train from the in-game model / skin list and start running.</span>
+              </p>
+            </div>
+          </li>
+        </ol>
+        <p class="note">
+          <span data-lang="zh">安装就是订阅，无需手动放置任何文件；本页面仅为展示页，不提供也不包含任何模型或资源包文件。</span>
+          <span data-lang="en">Installing is just subscribing — no manual file placement. This page is a showcase only: it hosts no model or bundle files.</span>
+        </p>
+
+        <div class="faq">
+          <h3 class="faq-title"><span data-lang="zh">常见问题</span><span data-lang="en">Troubleshooting</span></h3>
+          <details class="faq-item">
+            <summary><span data-lang="zh">皮肤没有出现在游戏内列表里？</span><span data-lang="en">The skin does not appear in the in-game list?</span></summary>
+            <p>
+              <span data-lang="zh">确认 AethaModelSwap 已订阅并启用；确认三份 <code>.hastemodel</code> 与同名 JSON、PNG 位于同一内容目录且文件名与清单完全一致；修改本地覆盖后重启游戏。</span>
+              <span data-lang="en">Confirm AethaModelSwap is subscribed and enabled; confirm the three <code>.hastemodel</code> files sit alongside their matching JSON and PNG files with names exactly as listed; restart Haste after changing a local override.</span>
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-lang="zh">模型浮空、下沉或滑步？</span><span data-lang="en">The model floats, sinks or slides?</span></summary>
+            <p>
+              <span data-lang="zh">用游戏内 Aetha ModelParamsEditor 调整 <code>verticalOffset</code>、<code>stanceHeight</code>、<code>strideLength</code> 与 <code>kneesOut</code>，再把保存的 JSON 拷回模组目录。</span>
+              <span data-lang="en">Tune <code>verticalOffset</code>, <code>stanceHeight</code>, <code>strideLength</code> and <code>kneesOut</code> with the in-game Aetha ModelParamsEditor, then copy the saved JSON back into the mod folder.</span>
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-lang="zh">材质变粉或模型不可见？</span><span data-lang="en">Materials turn pink or the model is invisible?</span></summary>
+            <p>
+              <span data-lang="zh">确认资源包由 Unity 6000.2.13f1（Built-in 管线 + Standard Shader）构建——2022.3 版构建的包无法加载；再检查 JSON 的 <code>scale</code> 与预制体是否位于 Assets 根目录。</span>
+              <span data-lang="en">Make sure the bundles were built with Unity 6000.2.13f1 (Built-in pipeline + Standard shader) — bundles built with 2022.3 will not load; then check the JSON <code>scale</code> value and that the prefab sits directly under Assets.</span>
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROGRESS ============ -->
+    <section id="progress" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span data-lang="zh">当前进度</span><span data-lang="en">Progress</span></p>
+          <h2><span data-lang="zh">打包完成，等待进游戏</span><span data-lang="en">Packed and validated, heading in-game</span></h2>
+          <div class="stripe-bar" aria-hidden="true"></div>
+        </header>
+
+        <div class="pipeline" role="list" aria-label="发布流水线 Release pipeline">
+          <div class="pipeline-step is-done" role="listitem">
+            <span class="pipeline-dot" aria-hidden="true">✓</span>
+            <strong><span data-lang="zh">打包与校验</span><span data-lang="en">Packaging &amp; validation</span></strong>
+            <em><span data-lang="zh">已完成</span><span data-lang="en">Done</span></em>
+          </div>
+          <div class="pipeline-link" aria-hidden="true"></div>
+          <div class="pipeline-step" role="listitem">
+            <span class="pipeline-dot" aria-hidden="true">2</span>
+            <strong><span data-lang="zh">游戏内测试</span><span data-lang="en">In-game testing</span></strong>
+            <em><span data-lang="zh">待进行</span><span data-lang="en">Upcoming</span></em>
+          </div>
+          <div class="pipeline-link" aria-hidden="true"></div>
+          <div class="pipeline-step" role="listitem">
+            <span class="pipeline-dot" aria-hidden="true">3</span>
+            <strong><span data-lang="zh">创意工坊发布</span><span data-lang="en">Workshop release</span></strong>
+            <em><span data-lang="zh">待进行</span><span data-lang="en">Upcoming</span></em>
+          </div>
+        </div>
+
+        <div class="progress-grid">
+          <section class="progress-col progress-done">
+            <h3>
+              <span class="ico" aria-hidden="true">✓</span>
+              <span data-lang="zh">已完成</span><span data-lang="en">Done</span>
+            </h3>
+            <ul>
+              <li><span data-lang="zh">两个 Sketchfab 模型（CC-BY）下载、转 FBX 并导入 Unity</span><span data-lang="en">Two Sketchfab models (CC-BY) downloaded, converted to FBX and imported into Unity</span></li>
+              <li><span data-lang="zh">Humanoid 骨骼、预制体、Standard 材质与贴图全部配置完成</span><span data-lang="en">Humanoid rigs, prefabs, Standard materials and textures fully configured</span></li>
+              <li><span data-lang="zh">两份 Windows <code>.hastemodel</code> 资源包构建完成</span><span data-lang="en">Two Windows <code>.hastemodel</code> bundles built</span></li>
+              <li><span data-lang="zh">两枚 256×256 游戏内图标渲染完成</span><span data-lang="en">Two 256×256 in-game icons rendered</span></li>
+              <li><span data-lang="zh"><code>dist/TheBoysPack</code> 组装完成，文件级校验与 UnityPy 结构校验全部通过</span><span data-lang="en"><code>dist/TheBoysPack</code> assembled; file-level and UnityPy structure checks all pass</span></li>
+            </ul>
+          </section>
+          <section class="progress-col progress-next">
+            <h3>
+              <span class="ico ico-clock" aria-hidden="true">◔</span>
+              <span data-lang="zh">待完成</span><span data-lang="en">Upcoming</span>
+            </h3>
+            <ul>
+              <li><span data-lang="zh">进入游戏实测动画、脚部 IK、材质与朝向</span><span data-lang="en">In-game testing of animation, foot IK, materials and orientation</span></li>
+              <li><span data-lang="zh">用游戏内 Aetha ModelParamsEditor 校准三份 JSON 的 IK 参数</span><span data-lang="en">Calibrate the three IK JSONs with the in-game Aetha ModelParamsEditor</span></li>
+              <li><span data-lang="zh">创建公开创意工坊条目并上传（封面、简介、署名与免责声明已备好）</span><span data-lang="en">Create the public Workshop item and upload it (cover, description, credits and disclaimer are ready)</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECH ============ -->
+    <section id="tech" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span data-lang="zh">技术细节</span><span data-lang="en">Under the hood</span></p>
+          <h2><span data-lang="zh">怎么造出来的</span><span data-lang="en">How it is built</span></h2>
+          <div class="stripe-bar" aria-hidden="true"></div>
+        </header>
+        <div class="tech-grid">
+          <article class="tech-card">
+            <h3><span data-lang="zh">游戏目标</span><span data-lang="en">Game target</span></h3>
+            <p>
+              <span data-lang="zh">Steam 版《Haste》（appid 1796470），游戏使用 Unity 6000.2.13f1；资源包必须用同一版本构建，2022.3 构建的包无法加载。</span>
+              <span data-lang="en">Haste on Steam (appid 1796470), built with Unity 6000.2.13f1; bundles must be built with the same version — 2022.3 bundles will not load.</span>
+            </p>
+          </article>
+          <article class="tech-card">
+            <h3><span data-lang="zh">文件契约</span><span data-lang="en">File contract</span></h3>
+            <p>
+              <span data-lang="zh">每个角色三个文件：小写名 + 编号的 <code>.windows.hastemodel</code>、同名 JSON（IK 参数）与 256×256 RGBA PNG 图标，AethaModelSwap 按同名规则注册皮肤。</span>
+              <span data-lang="en">Three files per character: a lowercase <code>.windows.hastemodel</code> bundle, a matching JSON (IK params) and a 256×256 RGBA PNG icon; AethaModelSwap registers skins by these exact names.</span>
+            </p>
+          </article>
+          <article class="tech-card">
+            <h3><span data-lang="zh">渲染与贴图</span><span data-lang="en">Rendering &amp; textures</span></h3>
+            <p>
+              <span data-lang="zh">Built-in 管线 + Standard Shader；贴图最大 2K。骨骼为 Humanoid Avatar，动画由主角 Animator 驱动。</span>
+              <span data-lang="en">Built-in pipeline with the Standard shader; textures up to 2K. Rigs are Humanoid Avatars driven by the player Animator.</span>
+            </p>
+          </article>
+          <article class="tech-card">
+            <h3><span data-lang="zh">本地测试</span><span data-lang="en">Local testing</span></h3>
+            <p>
+              <span data-lang="zh">开发期通过 <code>localoverride.&lt;PublishedFileId&gt;</code> 把游戏指向 <code>dist/TheBoysPack</code> 目录加载本地版本，测试完成后再走游戏内上传面板发布。</span>
+              <span data-lang="en">During development, <code>localoverride.&lt;PublishedFileId&gt;</code> points the game at the local <code>dist/TheBoysPack</code> folder; publishing goes through the in-game upload panel after testing.</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CREDITS ============ -->
+    <section id="credits" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span data-lang="zh">署名与声明</span><span data-lang="en">Credits &amp; disclaimer</span></p>
+          <h2><span data-lang="zh">谁做了什么</span><span data-lang="en">Who made what</span></h2>
+          <div class="stripe-bar" aria-hidden="true"></div>
+        </header>
+
+        <ul class="credits-list">
+          <li>
+            <span class="credit-name"><span data-lang="zh">祖国人模型</span><span data-lang="en">Homelander model</span></span>
+            <span class="credit-body">
+              <span data-lang="zh">Sketchfab 作者 StarRosea（基于 ShadowGear），CC-BY 授权。</span>
+              <span data-lang="en">By Sketchfab author StarRosea (based on ShadowGear), CC-BY.</span>
+              <a href="https://sketchfab.com/3d-models/none-164adb642f0040678bc78988c7b59df1" target="_blank" rel="noopener noreferrer">sketchfab.com → Homelander</a>
+            </span>
+          </li>
+          <li>
+            <span class="credit-name"><span data-lang="zh">火车头模型</span><span data-lang="en">A-Train model</span></span>
+            <span class="credit-body">
+              <span data-lang="zh">Sketchfab 作者 Fortnite Meow Skulls，原作者 @carinhaqualquer，CC-BY 授权。</span>
+              <span data-lang="en">By Sketchfab author Fortnite Meow Skulls, original model by @carinhaqualquer, CC-BY.</span>
+              <a href="https://sketchfab.com/3d-models/none-7c84803cf68d42eea5088314882d4992" target="_blank" rel="noopener noreferrer">sketchfab.com → A-Train</a>
+            </span>
+          </li>
+          <li>
+            <span class="credit-name"><span data-lang="zh">加载框架</span><span data-lang="en">Loader framework</span></span>
+            <span class="credit-body">
+              <span data-lang="zh">AethaModelSwap，独立创意工坊项目（3508742571），未随本包分发。</span>
+              <span data-lang="en">AethaModelSwap, a separate Workshop project (3508742571), not bundled with the mod.</span>
+            </span>
+          </li>
+        </ul>
+
+        <aside class="disclaimer" role="note">
+          <h3><span data-lang="zh">非官方粉丝作品声明</span><span data-lang="en">Unofficial fan project disclaimer</span></h3>
+          <p>
+            <span data-lang="zh">这是一个非官方、非商业的粉丝作品，与 Amazon、MGM、DC、Warner Bros.、Landfall 及原模型作者没有任何关联，也未获得任何授权。角色属于受保护 IP，相关创意工坊条目可能随时被权利人要求下架。CC-BY 许可只覆盖模型作者自己的贡献，不授予角色 IP 的任何权利。</span>
+            <span data-lang="en">This is an unofficial, non-commercial fan project. It is not affiliated with, endorsed by, or sponsored by Amazon, MGM, DC, Warner Bros., Landfall, or the original model authors. The characters are protected intellectual property and the Workshop item may be removed by a rights holder at any time. The CC-BY licenses cover only the model authors' own contributions and grant no rights to the underlying character IP.</span>
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">HASTE <span aria-hidden="true">×</span> THE BOYS</p>
+      <p class="footer-line"><span data-lang="zh">非官方粉丝作品 · 本站不提供任何模组文件下载</span><span data-lang="en">Unofficial fan project · no mod files are distributed on this site</span></p>
+      <p class="footer-ai">Made with AI · 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
