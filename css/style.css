@@ -332,6 +332,7 @@ code {
   max-width: 540px;
   margin-inline: auto;
   display: flex;
+  align-items: center;
   gap: 12px;
   padding: 12px;
 }
@@ -349,7 +350,8 @@ code {
 }
 .poster-frame img {
   width: calc(50% - 6px);
-  aspect-ratio: 1;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
   border-radius: 12px;
   filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.65));
@@ -464,7 +466,9 @@ code {
 }
 .card-stage img {
   width: 72%;
-  max-width: 300px;
+  max-width: 256px;
+  height: auto;
+  object-fit: contain;
   filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.65));
 }
 .chip {
