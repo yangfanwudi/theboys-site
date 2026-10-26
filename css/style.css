@@ -893,6 +893,51 @@ code {
   letter-spacing: 0.12em;
 }
 
+/* ===================== 反馈入口（页脚链接 + 悬浮按钮） ===================== */
+
+.footer-feedback {
+  font-size: 0.88rem;
+  margin-bottom: 14px;
+}
+.footer-feedback a {
+  color: var(--red-2);
+  font-weight: 600;
+  padding-bottom: 1px;
+  border-bottom: 1px dashed rgba(240, 67, 77, 0.5);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.footer-feedback a:hover {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
+.feedback-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: linear-gradient(160deg, var(--red-2), var(--red) 60%, var(--red-dark));
+  border: 1px solid rgba(240, 67, 77, 0.6);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 6px 22px rgba(217, 44, 53, 0.45), 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.feedback-fab:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 10px 26px rgba(217, 44, 53, 0.55), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.feedback-fab:active { transform: translateY(0); }
+.feedback-fab svg { flex: 0 0 auto; }
+
 /* ===================== Responsive ===================== */
 
 @media (max-width: 1020px) {
@@ -936,4 +981,12 @@ code {
   .hero-actions .btn { width: 100%; text-align: center; }
   .dep-copy { padding: 26px 22px; }
   .step { padding: 18px; }
+
+  /* 悬浮反馈按钮：小屏略收紧，保持 44px 以上可点高度 */
+  .feedback-fab {
+    right: 14px;
+    bottom: 14px;
+    padding: 11px 14px;
+    font-size: 0.86rem;
+  }
 }
